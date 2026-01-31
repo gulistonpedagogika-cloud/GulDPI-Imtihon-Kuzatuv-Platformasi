@@ -1,12 +1,9 @@
 
 [build]
-  publish = "."
-  command = ""
+  publish = "dist"
+  command = "npm run build"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[template.environment]
-  API_KEY = "Sizning_Gemini_API_Kalitingiz"
