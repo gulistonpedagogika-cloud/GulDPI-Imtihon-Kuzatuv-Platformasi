@@ -1,12 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
-import { Exam, ViewType } from './types.ts';
-import Header from './components/Header.tsx';
-import ExamList from './components/ExamList.tsx';
-import AdminDashboard from './components/AdminDashboard.tsx';
-import Login from './components/Login.tsx';
-import Footer from './components/Footer.tsx';
-import { fetchExams, addExam as addExamToDb, deleteExam as deleteExamFromDb } from './services/supabaseService.ts';
+import { Exam, ViewType } from './types';
+import Header from './components/Header';
+import ExamList from './components/ExamList';
+import AdminDashboard from './components/AdminDashboard';
+import Login from './components/Login';
+import Footer from './components/Footer';
+import { fetchExams, addExam as addExamToDb, deleteExam as deleteExamFromDb } from './services/supabaseService';
 
 const App: React.FC = () => {
   const [view, setView] = useState<ViewType>('home');

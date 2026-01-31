@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { Exam } from '../types.ts';
-import { getExamInsights } from '../services/geminiService.ts';
+import { Exam } from '../types';
+import { getExamInsights } from '../services/geminiService';
 
 interface AdminDashboardProps {
   exams: Exam[];
