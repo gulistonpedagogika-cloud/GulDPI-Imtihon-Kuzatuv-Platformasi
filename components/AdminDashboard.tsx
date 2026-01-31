@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
-import { Exam } from '../types';
-import { getExamInsights } from '../services/geminiService';
+import { Exam } from '../types.ts';
+import { getExamInsights } from '../services/geminiService.ts';
 
 interface AdminDashboardProps {
   exams: Exam[];
@@ -24,7 +24,6 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ exams, onAdd, onDelete,
 
     setIsSubmitting(true);
     
-    // AI check for a fun tip
     const tip = await getExamInsights(name);
     setAiTip(tip);
 
@@ -38,7 +37,6 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ exams, onAdd, onDelete,
     setLink('');
     setIsSubmitting(false);
 
-    // Auto clear AI tip
     setTimeout(() => setAiTip(null), 8000);
   };
 

@@ -19,11 +19,20 @@
         .animate-fadeIn { animation: fadeIn 0.4s ease-out forwards; }
         .animate-shake { animation: shake 0.3s ease-in-out infinite alternate; animation-iteration-count: 2; }
     </style>
+    <script>
+      // Brauzerda process.env xatoligini oldini olish uchun
+      window.process = {
+        env: {
+          API_KEY: "" // Netlify-dagi Environment variables orqali olinadi
+        }
+      };
+    </script>
 <script type="importmap">
 {
   "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
     "react": "https://esm.sh/react@^19.2.4",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
     "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
     "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2"
@@ -33,5 +42,7 @@
 </head>
 <body class="bg-slate-50 text-slate-900">
     <div id="root"></div>
+    <!-- Entry point - Bu qator saytni ishga tushiradi -->
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
