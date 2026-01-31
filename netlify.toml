@@ -1,0 +1,12 @@
+
+[build]
+  publish = "."
+  command = "echo 'Direct deployment - no build step needed'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[theme]
+  color_scheme = "light"
